@@ -22,7 +22,7 @@ DDD comes with some technical building blocks and a suggested architecture, but 
 
 We have already mentioned a couple of times the term domain but we have not stopped to define it yet.
 
-According to Eric Evans (the creator of DDD), the domain is "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software"[^i].
+According to Eric Evans (the creator of DDD), the domain is "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software"[^2].
 
 If, for example, we are building a basic calculator app, then the domain of our application is the four basic arithmetic operations (and all the things directely related with it).
 
@@ -38,13 +38,13 @@ The ubiquitious languages is defined with the help of every team member and the 
 
 ### Model
 
-The model as defined by Eric Evans is "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain."[^ii]. This means that the model is not a class, a type, an interface or a datase table, but a mix of one or many of those. The model aims to be as technology-agnostic as possible. The purpose of the domain is, again, not to reflect the implementation details of the technology we are using but to reflect the domain in which we are operating.
+The model as defined by Eric Evans is "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain."[^3]. This means that the model is not a class, a type, an interface or a datase table, but a mix of one or many of those. The model aims to be as technology-agnostic as possible. The purpose of the domain is, again, not to reflect the implementation details of the technology we are using but to reflect the domain in which we are operating.
 
 ## Architectural Patterns
 
 ## Building Blocks
 
-As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^2].
+As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^4].
 
 - Entities
 - Value Objects
@@ -60,12 +60,7 @@ We'll favor a FP flavor on the following examples and use cases.
 
 ### Architectural Decisions
 
-## Notes
-
-- [^1]: When we say piece we do not specifically mean "small".
-- [^2]: Even though there's no "true" DDD style/flavor, there are some styles that are common. Some of these styles/flavors are diametrically opposed. The two most obvious would be a heavily OOP inspired flavor vs a heavily FP inspired flavor. Other examples are repository-based vs CQRS-based.
-
-## Annotated Bibliography
-
-- [^i]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
-- [^ii]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
+[^1]: When we say piece we do not specifically mean "small".
+[^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
+[^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
+[^4]: Even though there's no "true" DDD style/flavor, there are some styles that are common. Some of these styles/flavors are diametrically opposed. The two most obvious would be a heavily OOP inspired flavor vs a heavily FP inspired flavor. Other examples are repository-based vs CQRS-based.
