@@ -104,17 +104,27 @@ Lastly, the infrastructure layer is in charge of the communication with the outs
 
 As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^5].
 
+- Layered Architecture
 - Entities
 - Value Objects
-- Domain Services
+- Domain Events
+- Services
+- Modules
 - Aggregates
 - Repositories
-- Mappers
 - Factories
-- Domain Events
-- Application Services
 
-We'll favor a FP flavor on the following examples and use cases.
+We'll favor an FP inspired flavor on the following examples and use cases.
+
+### Layered Architecture
+
+By choosing a layered architecture we can ensure our modeling is only responsible on how to express the domain. The models should not worry on how they are presented (User Interfaces) nor how they are store (Databases).
+
+The key point behind a layered architecture is isolation and decoupling. Inner are cohesive and only depend on themselves and inner layers, but not on outer layers.
+
+DDD favors a three layer approach: domain, application and infrastructure. But there's no restriction adding more layers when needed. But DDD recommends the use of closed-layers instead of open-layers[^open-closed].
+
+### Entities
 
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
@@ -125,3 +135,4 @@ We'll favor a FP flavor on the following examples and use cases.
 [^bduf]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
 [^onion]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
 [^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
+[^open-closed]: [Software Architecture Patterns](https://towardsdatascience.com/software-architecture-patterns-98043af8028) by Anuradha Wickramarachchi
