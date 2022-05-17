@@ -60,7 +60,7 @@ Because of this DDD plays really well with some practices that we could consider
 
 ### Agile
 
-DDD makes a strong emphasis on understanding the domain of the problem we are trying to solve first. Because of that DDD leans to avoid creating a big design up front[^bduf]. If we are or have a strong connection with the domain experts, we cannot know everything before hand.
+DDD makes a strong emphasis on understanding the domain of the problem we are trying to solve first. Because of that DDD leans to avoid creating a big design up front[^big-design-up-froant]. If we are or have a strong connection with the domain experts, we cannot know everything before hand.
 
 That's whay DDD makes an emphasys on making incremental refinements to the domain modeling and the ubiquitious language.
 
@@ -86,23 +86,9 @@ Refactoring not only goes hand-in-hand with DDD, but also with TDD, by being the
 
 Refactoring, promoted by DDD and supported by TDD, makes the process of updating and refining the code base something common. In other words, the quality of the code should be always improving[^refactoring].
 
-## Architectural Ideas Behind DDD
-
-Early versions of DDD relied heavily on OOP design patterns and a layered architecture[^onion]. This architecture is composed of three layers:
-
-- domain
-- application
-- infrastructure.
-
-These three divisions are not casual. The domain layer contains all the models related with the domain we're trying to work on. Let's get back to our basic arithmetic calculator: on the domain layer we would find the models for numbers, symbols and the four basic arithmetic operations, etc.
-
-The application layer contains all the business logic of our application. In the case of our calculator we know that in the domain of arithmetic the division by zero is not defined. Within our busines rules we could define a division by zero as not allowed instead of undefined[^4].
-
-Lastly, the infrastructure layer is in charge of the communication with the outside world[^hex]. By placing the infrastructure layer as the most-external layer the domain and application are ignorant on the "less important" implementation details. The inner layers don not know if the application is driven by a http socket, a gui, a RPC or any other IO device. That includes the persistence mechanisms (databases). That's why we usually refer to DDD as a persitence-ignorante architecture.
-
 ## DDD Building Blocks
 
-As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^5].
+As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^4].
 
 - Layered Architecture
 - Entities
@@ -118,21 +104,31 @@ We'll favor an FP inspired flavor on the following examples and use cases.
 
 ### Layered Architecture
 
-By choosing a layered architecture we can ensure our modeling is only responsible on how to express the domain. The models should not worry on how they are presented (User Interfaces) nor how they are store (Databases).
+Early versions of DDD relied heavily on OOP design patterns and a layered architecture[^onion-architecture]. This architecture is composed of three layers:
+
+- domain
+- application
+- infrastructure.
+
+By choosing a layered architecture we can ensure that our modeling is only responsible on how to express the domain. The models should not worry on how they are presented (User Interfaces) nor how they are store (Databases). That's why they are in the inner most layer. The models are ignorant to eveyrhing else outside of the domain.
+
+The application layer contains all the business logic of our application. The application layer can only extend the already defined rules and laws that govern the domain layer[^open-closed-principle].
+
+Lastly, the infrastructure layer is in charge of the communication with the outside world[^hexagonal-architecture]. By placing the infrastructure layer as the most-external layer the domain and application are ignorant on the "less important" implementation details. The inner layers don not know if the application is driven by a http socket, a gui, a RPC or any other IO device. That includes the persistence mechanisms (databases). That's why we usually refer to DDD as a persitence-ignorante architecture.
 
 The key point behind a layered architecture is isolation and decoupling. Inner are cohesive and only depend on themselves and inner layers, but not on outer layers.
 
-DDD favors a three layer approach: domain, application and infrastructure. But there's no restriction adding more layers when needed. But DDD recommends the use of closed-layers instead of open-layers[^open-closed].
+Even though DDD favors a three layer approach there's no restriction on adding more layers when needed. But DDD recommends the use of closed-layers instead of open-layers[^open-layers-closed-layers].
 
 ### Entities
 
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
-[^4]: It is important to note that the application layer (and it's constructs) can only operate on top of the laws and relationships defined on the domain layer. The application layer cannot (or should not) override the rules, laws and relationships defined on the entity layer.
-[^5]: Even though there's no "true" DDD style/flavor, there are some styles that are common. Some of these styles/flavors are diametrically opposed. The two most obvious would be a heavily OOP inspired flavor vs a heavily FP inspired flavor. Other examples are repository-based vs CQRS-based.
-[^hex]: See ["Hexagonal Architecture"](https://alistair.cockburn.us/hexagonal-architecture/) for reference.
-[^bduf]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
-[^onion]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
+[^open-closed-principle]: See ["Open/Closed Principle"](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) on Wikipedia
+[^4]: Even though there's no "true" DDD style/flavor, there are some styles that are common. Some of these styles/flavors are diametrically opposed. The two most obvious would be a heavily OOP inspired flavor vs a heavily FP inspired flavor. Other examples are repository-based vs CQRS-based.
+[^hexagonal-architecture]: See ["Hexagonal Architecture"](https://alistair.cockburn.us/hexagonal-architecture/) for reference.
+[^big-design-up-froant]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
+[^onion-architecture]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
 [^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
-[^open-closed]: [Software Architecture Patterns](https://towardsdatascience.com/software-architecture-patterns-98043af8028) by Anuradha Wickramarachchi
+[^open-layers-closed-layers]: [Software Architecture Patterns](https://towardsdatascience.com/software-architecture-patterns-98043af8028) by Anuradha Wickramarachchi
