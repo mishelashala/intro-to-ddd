@@ -110,6 +110,8 @@ Early versions of DDD relied heavily on OOP design patterns and a layered archit
 - application
 - infrastructure.
 
+Domain is the inner-most layer, followed by the application layer and finally with the infrastructure layer as the outer-most layer.
+
 By choosing a layered architecture we can ensure that our modeling is only responsible on how to express the domain. The models should not worry on how they are presented (User Interfaces) nor how they are store (Databases). That's why they are in the inner most layer. The models are ignorant to eveyrhing else outside of the domain.
 
 The application layer contains all the business logic of our application. The application layer can only extend the already defined rules and laws that govern the domain layer[^open-closed-principle].
