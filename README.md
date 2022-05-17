@@ -52,6 +52,40 @@ Many times bounded (specific) contexts cannot be unified under a single (general
 
 This is not only expected, but natural. Instead of fighting this phenomena is better to have a clear boundary: where a bounded context starts and when it ends; and a mapping mechanism between contexts. The ubiquitious language is the tool that allows us to define those boundaries and those mappings.
 
+## Common practices promoted by DDD
+
+When I first found DDD I was looking for an "architecture" to help me scale the piece of software that I was working on at the moment. DDD is more than a bunch architectural patterns and a "file structure". It's a process that enables better communication.
+
+Because of this DDD plays really well with some practices that we could consider "standard" on the software industry
+
+### Agile
+
+DDD makes a strong emphasis on understanding the domain of the problem we are trying to solve first. Because of that DDD leans to avoid creating a big design up front[^bduf]. If we are or have a strong connection with the domain experts, we cannot know everything before hand.
+
+That's whay DDD makes an emphasys on making incremental refinements to the domain modeling and the ubiquitious language.
+
+DDD welcomes changes: when the domain modeling changes we must update the ubiquitious language to reflect that and visce-versa.
+
+### Continious Integration
+
+By making use of bounded contexts DDD allows us to "partitioned" the application into smaller pieces. This helps big teams to be splitted in smaller teams and letting them work on sub-parts of the application without interfiring one with another.
+
+By promoting Continious Integration conflicts between teams and domain modeling can be spotted and aliviated "fast".
+
+### TDD
+
+Because we are constantly updating the domain modeling we must have a strong mechanism that assures us that the constant changes that we make donnot break the code. TDD is that mechanism. Is a safety net that prevents us from breaking breaking existing code. But also, when we have an extensive and well defined test suite introducing new changes to the system becomes trivial.
+
+Making the benefits of TDD twofold: not only we have a safety net, but also a mechanism that makes the software easy to change.
+
+### Refactoring
+
+We have described earlier the process of updating the domain modeling and the ubiquitous language as refining. The technical term for this is refactoring. When we discover new information or new insights about the domain we are driven to update the domain modeling to reflect those changes by refactoring the existing models.
+
+Refactoring not only goes hand-in-hand with DDD, but also with TDD, by being the tool that facilitate us updating the code without breaking existing behavior.
+
+Refactoring, promoted by DDD and supported by TDD, makes the process of updating and refining the code base something common. In other words, the quality of the code is always improving.
+
 ## Architectural Ideas Behind DDD
 
 Early versions of DDD relied heavily on OOP design patterns and a layered architecture[^4]. This architecture is composed of three layers:
@@ -66,7 +100,7 @@ The application layer contains all the business logic of our application. In the
 
 Lastly, the infrastructure layer is in charge of the communication with the outside world[^6]. By placing the infrastructure layer as the most-external layer the domain and application are ignorant on the "less important" implementation details. The inner layers don not know if the application is driven by a http socket, a gui, a RPC or any other IO device. That includes the persistence mechanisms (databases). That's why we usually refer to DDD as a persitence-ignorante architecture.
 
-## Building Blocks
+## DDD Building Blocks
 
 As mentioned during the introduction, DDD comes with some building blocks, this building blocks are the technical foundation that will allow us to model our domain. Not all of these are used nor needed at the same time, some of those are more common on different "flavors" of DDD[^7].
 
@@ -87,6 +121,7 @@ We'll favor a FP flavor on the following examples and use cases.
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
+[^bduf]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
 [^4]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
 [^5]: It is important to note that the application layer (and it's constructs) can only operate on top of the laws and relationships defined on the domain layer. The application layer cannot (or should not) override the rules, laws and relationships defined on the entity layer.
 [^6]: See ["Hexagonal Architecture"](https://alistair.cockburn.us/hexagonal-architecture/) for reference.
