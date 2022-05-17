@@ -40,6 +40,18 @@ The ubiquitious languages is defined with the help of every team member and the 
 
 The model as defined by Eric Evans is "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain."[^3]. This means that the model is not a class, a type, an interface or a datase table, but a mix of one or many of those. The model aims to be as technology-agnostic as possible. The purpose of the domain is, again, not to reflect the implementation details of the technology we are using but to reflect the domain in which we are operating.
 
+### Bounded Context
+
+Every model has a context in which it makes sense. If we take the model outside of the context then the model will lose meaning.
+
+Big pieces of software can (and will usually) have multiple contexts. These context can have some duplication regarding the modeling: they work with the same model. When this happens is pretty common for models to stray away from each other.
+
+These discrepancies sometimes can be aliviated by removing duplication and unifying multiples models into a single one. This, however, is not always possible.
+
+Many times bounded (specific) contexts cannot be unified under a single (general) context. So we end up with bounded contexts having their own models and doing a mapping between contexts when we need them to work together.
+
+This is not only expected, but natural. Instead of fighting this phenomena is better to have a clear boundary: where a bounded context starts and when it ends; and a mapping mechanism between contexts. The ubiquitious language is the tool that allows us to define those boundaries and those mappings.
+
 ## Architectural Ideas Behind DDD
 
 Early versions of DDD relied heavily on OOP design patterns and a layered architecture[^4]. This architecture is composed of three layers:
