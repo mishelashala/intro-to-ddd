@@ -84,7 +84,7 @@ We have described earlier the process of updating the domain modeling and the ub
 
 Refactoring not only goes hand-in-hand with DDD, but also with TDD, by being the tool that facilitate us updating the code without breaking existing behavior.
 
-Refactoring, promoted by DDD and supported by TDD, makes the process of updating and refining the code base something common. In other words, the quality of the code is always improving.
+Refactoring, promoted by DDD and supported by TDD, makes the process of updating and refining the code base something common. In other words, the quality of the code should be always improving[^refactoring].
 
 ## Architectural Ideas Behind DDD
 
@@ -116,8 +116,6 @@ As mentioned during the introduction, DDD comes with some building blocks, this 
 
 We'll favor a FP flavor on the following examples and use cases.
 
----
-
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
@@ -126,3 +124,4 @@ We'll favor a FP flavor on the following examples and use cases.
 [^hex]: See ["Hexagonal Architecture"](https://alistair.cockburn.us/hexagonal-architecture/) for reference.
 [^bduf]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
 [^onion]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
+[^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
