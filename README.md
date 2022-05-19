@@ -144,6 +144,20 @@ By nature of being property or computation descriptors value objects are immutab
 
 It is common for entities to be composed partially or completely by value objects.
 
+### Domain Events
+
+Domain events are things that have already happened inside the domain.
+
+As we discussed earlier, entities keep track of their state an life cycle (they are aware they change), but they are not aware of the reason behind those changes.
+
+There are multiple mechanisms to try to keep track of these changes outside of the domain model (cloud traling, logs, history changes). But these mechanisms are not optimal and rely heavily on concepts outside of the domain.
+
+Domain events work as a log system that not only tells us what happened inside the domain, but also express why it happened. They are not the same as application events (like `file oppened`, `file closed`, `database connection stablished`, etc), application events are charged with technical implementation details, while domain events are heavily charged with domain concepts.
+
+By representing things that happened inside the domain we can derive the current state of entities inside of the domain in the absence of data. This allows us to keep consistency in distributed systems[^eventual-consistency].
+
+By being descriptions of things that already happened domain events cannot change (hey are immutable) but by also being descriptions of why things happened they need to have all the context necessary to interpret them. This context can include the data that changed, the timestamps of when this happened, the ids of the "affected" entities and/or the ids of the person/system responsible of the change.
+
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
@@ -156,3 +170,4 @@ It is common for entities to be composed partially or completely by value object
 [^open-layers-closed-layers]: [Software Architecture Patterns](https://towardsdatascience.com/software-architecture-patterns-98043af8028) by Anuradha Wickramarachchi
 [^structural-equality]: When dealing with terms of identity we must avoid structural equality at all costs. As we said, antities can have different representations, this includes having more or less fields/properties in certain points of times. Also, structural inequality becomes useless when we compare the same entity over times since entities' internal state can change.
 [^external-ids]: It is pretty common to delegate the identity definition/generation to external services like databases or other persistance mechanisms.
+[^eventual-consistency]: See ["Eventual Consistency"](https://en.wikipedia.org/wiki/Eventual_consistency) on Wikipedia
