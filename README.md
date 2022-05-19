@@ -124,6 +124,18 @@ Even though DDD favors a three layer approach there's no restriction on adding m
 
 ### Entities
 
+Some objects have a lifecycle: they go thru a stream of internal transformation. In order to know if two objects are the same object we need to develop a mechanism that allows us to identifying them. In other words, they need to have an identity.
+
+This is the property that differentiate entities from other objects. By having an identity we can take the same object in two different points of time know they are the same entity.
+
+This also applies with different representations: we can change the shape or form of the object and by comparing the identity we can still know they are the same object. The inverse is also applicable: two entities are different if they don't hold the same identity.
+
+We must have a clear and well defined mechanism iniside our model to stablish and differentiate identity[^structural-equality]. The implementation details is not important as long as they are consistant[^external-ids].
+
+A weak or unclear identity mechanism will most likely lead to data corruption: updating or referencing the wrong entity.
+
+Entities, just like any other object of our model, is a domain concept. And as such entities have well defined attributes, relationships and actions.
+
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
@@ -134,3 +146,5 @@ Even though DDD favors a three layer approach there's no restriction on adding m
 [^onion-architecture]: See ["The Onion Architecture: Part 1"](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/) for reference
 [^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
 [^open-layers-closed-layers]: [Software Architecture Patterns](https://towardsdatascience.com/software-architecture-patterns-98043af8028) by Anuradha Wickramarachchi
+[^structural-equality]: When dealing with terms of identity we must avoid structural equality at all costs. As we said, antities can have different representations, this includes having more or less fields/properties in certain points of times. Also, structural inequality becomes useless when we compare the same entity over times since entities' internal state can change.
+[^external-ids]: It is pretty common to delegate the identity definition/generation to external services like databases or other persistance mechanisms.
