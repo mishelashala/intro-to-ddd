@@ -136,6 +136,14 @@ A weak or unclear identity mechanism will most likely lead to data corruption: u
 
 Entities, just like any other object of our model, is a domain concept. And as such entities have well defined attributes, relationships and actions.
 
+### Value Objects
+
+Value objects are also domain concepts and are charged with significant meaning, but instead of being their own thing they usually represent a characteristic or a computation of something else.
+
+By nature of being property or computation descriptors value objects are immutable and side-effect. They don't keep track of their internal state changes, due to that value objects don't need to have an identity mechanism. They are interchangeable with one and another.
+
+It is common for entities to be composed partially or completely by value objects.
+
 [^1]: When we say piece we do not specifically mean "small".
 [^2]: "a sphere of knowledge, influence, or activity. The subject area to which the user applies a program is the domain of the software" -- Domain-Driven Design Reference: Definitions and Pattern Summaries
 [^3]: "A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain." -- Domain-Driven Design Reference: Definitions and Pattern Summaries
