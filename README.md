@@ -124,6 +124,54 @@ By representing things that happened inside the domain we can derive the current
 
 By being descriptions of things that already happened domain events cannot change (hey are immutable) but by also being descriptions of why things happened they need to have all the context necessary to interpret them. This context can include the data that changed, the timestamps of when this happened, the ids of the "affected" entities and/or the ids of the person/system responsible of the change.
 
+### Services
+
+Sometimes transformations that are unnatural to the domain are presented to us. Since these transformations do not make sense in the context of the domain it is convenient to extract them out into services.
+
+Services, just like any part of our design, should have a clear name, have an intention-revealing interface (contract) and be part of our ubiquitious language.
+
+Services are by nature "doers". They do not represent nor hold data, they just perform actions.
+
+### Modules
+
+Modules are logical groupings of sets of cohesive concepts. Modules can be used to tell the "story" of the system.
+Modules should have a limited and tight scope. They allow low coupling by being indepndent logical groupings, and allow high cohesion by mainting all its concepts close[^close-near].
+
+Modules are also part of the ubiquitious language, and as such, should have a meaningful and well dedfined name.
+
+### Aggregates
+
+Objects that have many associations with other objects have a hard time trying to keep an internal state consistent.
+This is due to the nature of the relationships between internal states. One change on the internal state of an entity can trigger a change in another's internal state, and so on, and so on.
+
+To avoid this ripple effect we must group entities and value objects into aggregates and define clear boundaries around them.
+
+An entity will always work as the root: the entry point of the aggregate. The aggregates can only be referenced thru the root. Other objects should not have access to the internals of the aggregate.
+
+Aggregates should always be in a consistent state, therefore, is important to define all their invariants and always enforce them.
+
+Within the boundaries of the aggregates all the operations must be done synchronously to enforce consistency. Meanwhile, all operations outside of the aggregate can be done asynchronously.
+
+### Repositories
+
+Repositories allow us to access query to aggregates. We must avoid querying specific data and transformations using concepts outside of the domain (i.e sql).
+
+We must enforce consistency by querying aggregates using repositories. Querying data transformations using other mechanisms can bypass the rules of our domain and lead to an inconsistent internal state[^garbage-in-garbage-out] and breach encapsulation. Also, by bypassing the domain and placing the query logic somewhere else we turn our rich and expresive entities and value objects into mere data containers[^anemic-domain-model].
+
+To enforce consistency repositories must create the illusion of in data memory by serving as the global data access.
+
+Aggregates also must define at root level methods for adding and/or removing objects within their boundaries. And selectors for data querying to avoid relying on out-of-domain concepts. When querying aggregates they should return full and consistent instances of entities/value-objects.
+
+We should avoid having repositories that work for multiple aggregates, one repository for each aggregate.
+
+### Factories
+
+Factories allows us to encapsulate object assembly[^object-assembly]. This is specially useful while dealing with complex objects that rely on many relationships. Complex assembly should always fall under factorie's responsibilities and not the objects themselves. Mxising both responsibilities, assembly and creation[^assembly-vs-creation], of objects can lead to a muddy design. It is better to keep them separated. Any complex object creation should be delegated completely to factories.
+
+Any object created thru factories should be in a valid state. Factories achieve this by always enforcing object's invariants.
+
+Complex assembly operations can be aided by the usage of builders and other patterns[^builder-pattern].
+
 ## Common practices promoted by DDD
 
 When I first found DDD I was looking for an "architecture" to help me scale the piece of software that I was working on at the moment. DDD is more than a bunch architectural patterns and a "file structure". It's a process that enables better communication.
@@ -171,3 +219,9 @@ Refactoring, promoted by DDD and supported by TDD, makes the process of updating
 [^structural-equality]: When dealing with terms of identity we must avoid structural equality at all costs. As we said, antities can have different representations, this includes having more or less fields/properties in certain points of times. Also, structural inequality becomes useless when we compare the same entity over times since entities' internal state can change.
 [^external-ids]: It is pretty common to delegate the identity definition/generation to external services like databases or other persistance mechanisms.
 [^eventual-consistency]: See ["Eventual Consistency"](https://en.wikipedia.org/wiki/Eventual_consistency) on Wikipedia
+[^close-near]: They are close in the sense that everything is near of each other, not that they are closed to modification.
+[^garbage-in-garbage-out]: See ["Garbage-in, Garbage-out"](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) on Wikipedia
+[^anemic-domain-model]: See ["Anemic Doamin Model"](https://en.wikipedia.org/wiki/Anemic_domain_model) on Wikipedia
+[^object-assembly]: Also known by the names of aggregation, composition and augmentation.
+[^builder-pattern]: See ["Builder Pattern"](https://en.wikipedia.org/wiki/Builder_pattern) on Wikpedia
+[^assembly-vs-creation]: Creation can also be accomplished thru factory functions. But the usage of factories for object creation is not that common in OOP languages due to widespread usage of classes and constructors.
