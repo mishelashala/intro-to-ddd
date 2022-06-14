@@ -36,7 +36,7 @@ So I gave it a second chance and it basically threw me into a rabbit hole from w
 
 DDD is hard to learn, not because of the lack of resources, but for the amount of concepts you have to learn and master. And as almost everything in software you have to pratice it with real life projects. So I went ahead and refactored an entire real-life project I was working on to make it more DDD-ish. It took me about two (2) months of work just to have everything in the three (3) little boxes (application, domain, infrastructure).
 
-But I was not satisfied with the end result. Not only it did not feel natural, but it also was causing some problems. Problems that were not inherent to DDD, but to my lack of mastery. So I went ahead and started researching more, and subsequentely refactoring more. Until this date I'm still researching and refactoring, but at this point I think I have a good grasp of what DDD looks like in the real life.
+But I was not satisfied with the end result. Not only it did not feel natural, but it was also causing some problems. Problems that were not inherent to DDD, but to my lack of mastery. So I went ahead and started researching more, and subsequentely refactoring more. Until this date I'm still researching and refactoring, but at this point I think I have a good grasp of what DDD looks like in the real life.
 
 At certain point I realized I was not able to explain what DDD was about. Is not only about architecture, code, language, communication and teams. Is a mix of those and many other things.
 
