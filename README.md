@@ -44,6 +44,6 @@ So I decided to write this introduction. This introduction is the byproduct of t
 
 ![My Collection of Notes](https://user-images.githubusercontent.com/5624153/173580689-efe72819-4ae8-4de5-8a99-ed338982b55d.jpeg)
 
-I'm primarely writing this for my self - and some close friends - but I hope some other people find this useful.
+I'm primarily writing this for my self - and some close friends - but I hope some other people find this useful.
 
 [^1]: When we say piece we do not specifically mean "small".
