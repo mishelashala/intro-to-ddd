@@ -30,9 +30,9 @@ The third part "Strategic Design" is about communcation and team structure. In l
 
 Me, some close friends, and perhaps some internet strangers.
 
-I've been researching and using DDD for more than a year by the time I'm writing this (June 2022). I was just looking for an "architecture" to solve all my problems and I suddenly remembered the Big Blue Book (Domain-Driven Design: Tackling Complexity in the Heart of Software), book that, by the way, I started reading circa 2018 and never finished.
+I've been researching and using DDD for more than a year by the time I'm writing this (June 2022). I was just looking for an "architecture" to solve all my problems and I suddenly remembered the Big Blue Book (Domain-Driven Design: Tackling Complexity in the Heart of Software). Book that, by the way, I started reading circa 2018 and never finished.
 
-So I gave it a second chance and basically threw me into a rabbit hole from which until this date I've not been able to scape completely.
+So I gave it a second chance and it basically threw me into a rabbit hole from which until this date I've not been able to scape completely.
 
 DDD is hard to learn, not because of the lack of resources, but for the amount of concepts you have to learn and master. And as almost everything in software you have to pratice it with real life projects. So I went ahead and refactored an entire real-life project I was working on to make it more DDD-ish. It took me about two (2) months of work just to have everything in the three (3) little boxes (application, domain, infrastructure).
 
