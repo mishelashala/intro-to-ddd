@@ -45,5 +45,3 @@ So I decided to write this introduction. This introduction is the byproduct of t
 I'm primarely writing this for my self - and some close friends - but I hope some other people find this useful.
 
 [^1]: When we say piece we do not specifically mean "small".
-[^big-design-up-front]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
-[^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
