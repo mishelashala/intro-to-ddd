@@ -42,6 +42,8 @@ At certain point I realized I was not able to explain what DDD was about. Is not
 
 So I decided to write this introduction. This introduction is the byproduct of the collection of notes that I've gathered for the last couple of months about DDD. It is also my way to explaining what DDD is about, not only to myself, but to others.
 
+![My Collection of Notes](https://user-images.githubusercontent.com/5624153/173580689-efe72819-4ae8-4de5-8a99-ed338982b55d.jpeg)
+
 I'm primarely writing this for my self - and some close friends - but I hope some other people find this useful.
 
 [^1]: When we say piece we do not specifically mean "small".
