@@ -45,3 +45,15 @@ Models should stay coherent and consistent all the time. They must have no contr
 ## Stand Alone Classes
 
 During the process of software design low coupling should always be a top priority. Clases should always aim to be self-sufficient. Classes should not rely on concepts outside of themselves and be -as much as possible- understandable without the knowledge of the entire context in which they are contained.
+
+## Closure of Operations
+
+To define what closure of operation is, first, we must define what an endomorphism is. In simple terms, an endomorphism is an operation that goes from itself to itself. In other words, an operation that always produces the same result type as the input type. Closure of Operations just means that an operation is an endomorphism.
+
+When possible we must define -and favor- operations as, or at least that behave as, endomorphims.
+
+One of the benefit of closure of operations is that they provide an interface -a contract- without the need of external dependencies. These interfaces have everything they need in theirselves to operate.
+
+Value objects are, generally speaking, the result of operations. Making them the best candidate for closure of operations.
+
+The same cannot be said about entities. Entities are not the result of operations, therefore is uncommon to see the use of closure of operations with entities.
