@@ -29,3 +29,15 @@ We must favor side-effect-free functions in our systems as much as possible. One
 The idea here is not to eliminate side=effects completely, but to have them under control.
 
 One strategy to use when we encounter operations that produce side-effects is to seggregate these operations into commands. To do this we can follow the command-query seggregation principle.
+
+## Assertios
+
+Assertions help us define post-operation conditions and invariantes on aggregates. Assertions help us create -and enforce- contracts for services and entites.
+
+Every aggregate should define post-operation conditions and invariants to check the validity of the aggregate's internal state.
+
+Instead of reinventing the wheel we can use the features that some programming languages already provide to state assertions.
+
+Assertions can be designed and enforced thru the use of techniques such as TDD and unit testing.
+
+Models should stay coherent and consistent all the time. They must have no contraditions in their internal state under no circunstance. Assertions are a great way to keep our models always as such.
