@@ -57,3 +57,17 @@ One of the benefit of closure of operations is that they provide an interface -a
 Value objects are, generally speaking, the result of operations. Making them the best candidate for closure of operations.
 
 The same cannot be said about entities. Entities are not the result of operations, therefore is uncommon to see the use of closure of operations with entities.
+
+## Declarative Design
+
+The opposite of declarative design is procedural code. Some of the problems with procedural code are the lack of rigor, code duplication and de abundance of boiler plate.
+
+Procedular codes most of the times focues on _how_ we do things, and mostly ignores _what_ we are doing. This makes procedural code lack meaning. It bears no meaningful significance nor relationship with our model.
+
+Declarative code, in the other hand, focues mostly on _what_ we are doing, and ignores the _how_ we are doing it. This makes our code behave as an executable specification.
+
+One extra benefit of declarative code is it's honesty: declarative code doesn't lie, it does what it says it does. This means we can take declarative code at face value and trust it.
+
+This doesn't mean that declarative code doesn't need to prove that it does what it says it does during the process of writing tests, but instead that it adds an extra layer of confidence and rigor to our code.
+
+Declarative code is not infalible, it can be corrupted. One way to corrupt declarative code is by bypassing the stablished rules in our model.
