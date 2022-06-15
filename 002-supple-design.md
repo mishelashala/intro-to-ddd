@@ -17,3 +17,15 @@ By following certain patterns and rules a supple design makes its behavior obvio
 An intention-reveiling interface is achieved when every element of our model has a descriptive and meaningful name. In other words: things do what they say they do, nothing more, nothing less.
 
 These names must always keep encapsulation intact. They not reveal implementation details -the how-, instead the focus on the task at hand -the what-. Intention-reveiling interfaces are declarative by nature.
+
+## Side-Effect-Free Functions
+
+Object composition, function composition or any other kind becomes hard when we don't have side-effect-free functions. Side effects make composition, specially of computations, hard to predict and understand.
+
+Side-effect-free functions have an interesting effect over abstractions and behaviors. First, it makes abstractions predictable, and second behavior consistent. In other words, abstractions do what they say they do, and behaviors don't hold any nasty surprises.
+
+We must favor side-effect-free functions in our systems as much as possible. One thing to note on this is that software without side-effect-free functions is impossible. A system without side-effects is impossible to reach. It behaves like a black box: nothing goes in and nothing goes out.
+
+The idea here is not to eliminate side=effects completely, but to have them under control.
+
+One strategy to use when we encounter operations that produce side-effects is to seggregate these operations into commands. To do this we can follow the command-query seggregation principle.
