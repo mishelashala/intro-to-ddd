@@ -79,3 +79,11 @@ A declarative style of design can only be achived when our model follows the tec
 A supple design not only enables a declarative style of design, but it can also lead to one. By adopting these techniques we can help migrate a non-declarative style of design in an old system int oa declarative one.
 
 Supple design and a declarative style of design are not equivalent. A supple design just enable us to reduce the cost of friction that would require us to get to a declarative style of design. In other words, a supple design is a pre-requisit to achieve a declarative state of design.
+
+## Drawing on Stablished Formalism
+
+Starting a conceptual framework from scratch -specially on a new project- can be challenging. Most of the time, this is unnecesary and should be avoided.
+
+Many domains -like math- already have a rich set of rules and laws already stablished. We don't need to re-invent the wheel, but instead we can draw our supple design on top of this prior-art.
+
+This not only would save us a lot of time, but it would also provide us with all the richness and rigor that these field already have in place.
