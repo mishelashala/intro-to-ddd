@@ -41,3 +41,7 @@ Instead of reinventing the wheel we can use the features that some programming l
 Assertions can be designed and enforced thru the use of techniques such as TDD and unit testing.
 
 Models should stay coherent and consistent all the time. They must have no contraditions in their internal state under no circunstance. Assertions are a great way to keep our models always as such.
+
+## Stand Alone Classes
+
+During the process of software design low coupling should always be a top priority. Clases should always aim to be self-sufficient. Classes should not rely on concepts outside of themselves and be -as much as possible- understandable without the knowledge of the entire context in which they are contained.
