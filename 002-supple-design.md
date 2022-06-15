@@ -71,3 +71,11 @@ One extra benefit of declarative code is it's honesty: declarative code doesn't 
 This doesn't mean that declarative code doesn't need to prove that it does what it says it does during the process of writing tests, but instead that it adds an extra layer of confidence and rigor to our code.
 
 Declarative code is not infalible, it can be corrupted. One way to corrupt declarative code is by bypassing the stablished rules in our model.
+
+## A declarative Style of Design
+
+A declarative style of design can only be achived when our model follows the techniques mentioned above: intention-revealing interfaces, side-effect-free functions and assertions.
+
+A supple design not only enables a declarative style of design, but it can also lead to one. By adopting these techniques we can help migrate a non-declarative style of design in an old system int oa declarative one.
+
+Supple design and a declarative style of design are not equivalent. A supple design just enable us to reduce the cost of friction that would require us to get to a declarative style of design. In other words, a supple design is a pre-requisit to achieve a declarative state of design.
