@@ -30,7 +30,7 @@ The idea here is not to eliminate side=effects completely, but to have them unde
 
 One strategy to use when we encounter operations that produce side-effects is to seggregate these operations into commands. To do this we can follow the command-query seggregation principle.
 
-## Assertios
+## Assertions
 
 Assertions help us define post-operation conditions and invariantes on aggregates. Assertions help us create -and enforce- contracts for services and entites.
 
