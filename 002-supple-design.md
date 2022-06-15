@@ -87,3 +87,13 @@ Starting a conceptual framework from scratch -specially on a new project- can be
 Many domains -like math- already have a rich set of rules and laws already stablished. We don't need to re-invent the wheel, but instead we can draw our supple design on top of this prior-art.
 
 This not only would save us a lot of time, but it would also provide us with all the richness and rigor that these field already have in place.
+
+## Conceptual Contours
+
+During the process of domain distillation avoid too much granularity. Avoid breaking down pieces more than it is needed. Too much granularity can dilute and fragment our domain.
+
+When our model gets fragmented or diluted meaning and context are lost. Designing elements should be decomposed into smaller pieces only when these pieces preserve cohesion and meaning.
+
+In order to do soe try to find and follow the ntarual divisions of the the domain to help you identify where the conceptual contours lay.
+
+Constant refactoring will naturally lead you to find and refine the conceptual countours of your domain.
