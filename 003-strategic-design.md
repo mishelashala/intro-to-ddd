@@ -82,6 +82,14 @@ Upstream-downstream relationships between teams can be beneficiated by forging a
 
 This customer-supplier relationship forces the upstream team to take into consideration the needs of the downstream team during the planning process.
 
+### Comformist Team
+
+When to teams decide to forge a client-supplier relationships but the upstream teams doesn't hold its commitment to take the downstream team's needs into account the relationship will end up deforming into a conformist relationships.
+
+In this case upstream team will always cause delays on the work of downstream teams. Not only by not delivering what downstream teams need in time, but also in form. The upstream team can end up producing interfaces that don't match the needs of the downstream team, forcing the downstream team to rework.
+
+When the relationships had deformed into a comformist one, the downstream team end up accepting its "fate". The only thing left for them is just to accept things as they are, and work with what they have[^sad].
+
 ### Microservices
 
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
