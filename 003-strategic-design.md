@@ -12,6 +12,10 @@ Bounded contexts can be part of an entire system taking the form of modules, ser
 
 By following this strategy design process we influence not only the code, but the way we write the code. This leads to structure processes, operations, policies, teams and interactions around bounded contexts[^inverse-conway-s-manouver].
 
+## Teams Topologies
+
+As mentioned above, by describing and delimiting the bounded contexts in a project we can achieve an inverse conway manouver. Avobe there are some team topologies listed that emerge when we follow this approach.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
