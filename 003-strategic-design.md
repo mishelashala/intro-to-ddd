@@ -32,6 +32,14 @@ Sometimes in an organization two (2) teams can be completely independent and wor
 
 This is a strange all or nothing situation, if one team doesn't deliver, even when they are completely independent, both teams fail at delivery.
 
+### Free Team
+
+A free team is one such that its software project has little or no effect on other projects when its delivered.
+
+In projects with bounded contexts where strong boundaries exist and there's no need for translation and communication with other bounded contexts free teams can, and will, emerge.
+
+As long as free teams deliver, they must be left alone to operate in an autonomous manner.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
