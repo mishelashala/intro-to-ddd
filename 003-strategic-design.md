@@ -26,6 +26,12 @@ One common example of this relationship is a team that is developing a UI librar
 
 The upstream team not only, in some circunstances, slow down significatively the work of the downstream team, but it can also make the downstream team fail at delivery.
 
+### Mutually Dependent Teams
+
+Sometimes in an organization two (2) teams can be completely independent and work in two separate bounded contexts, but in order for both to succeed they must deliver their work at the same time.
+
+This is a strange all or nothing situation, if one team doesn't deliver, even when they are completely independent, both teams fail at delivery.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
