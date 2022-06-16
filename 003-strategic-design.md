@@ -54,6 +54,14 @@ Since we are mapping out all the boundaries and contexts in our system we can us
 
 In order for development to have a strategic plan, first we must have a realistic plan and a deep understanding of the problem. The map not only helps us documenting the contexts and relationships, but it also forces us to think in teams of a realistic design.
 
+### Partnership Teams
+
+Often in softare projects mutually dependent teams emerge. When this happens forge a partnertship within teams in order to ease development and to make sure both succeed.
+
+This partnership will require the creation of processes to coordinate planing, development, management and integration between the teams. Both projects must accomodate the needs of the other in all the phases previously mentioned.
+
+Teams in a partnership don't need to know all the internal details of each other.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
