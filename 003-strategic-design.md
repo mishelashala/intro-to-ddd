@@ -62,6 +62,20 @@ This partnership will require the creation of processes to coordinate planing, d
 
 Teams in a partnership don't need to know all the internal details of each other.
 
+### Shared Kernel
+
+Continious integration, specially in projects with many and teams, can be slowed down by the inherent complexity of having to coordinate too many, or too big, teams. This is an expected side-effect that will generate race conditions between integrations, specially in uncoordinated environments.
+
+These race conditions will end up causing a mismatch between already defined contracts and interfaces, causing conflicts and rework for the parts involved.
+
+To combat this we must designate a small subset of the domain: a shared kernel. This subset must have the approval of all teams.
+
+Aim to keep the shared kernel small. Only the minimum amount of functionality that supports the model should be accepted as part of it. If you need to extend the kernel, always build on top of it following the open-closed principle.
+
+If something needs to be agreed on by all the teams before changing it, then that subset of functionally also must be migrated into the shared kernel. One good example of this is database tables and models.
+
+The shared kernel will endup generating a upstream-downstream relationship with teams. To avoid slowing down other teams always use continious integration and versioning to avoid breaking existing functionally and to have breaking changes under control.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
