@@ -76,6 +76,14 @@ If something needs to be agreed on by all the teams before changing it, then tha
 
 The shared kernel will endup generating a upstream-downstream relationship with teams. To avoid slowing down other teams always use continious integration and versioning to avoid breaking existing functionally and to have breaking changes under control.
 
+## Customer/Supplier Development
+
+Upstream-downstream relationships between teams can be beneficiated by forging also a customer-supplier relatinship. This prevents downstream teams to be at complete mercy of the upstream team.
+
+This customer-supplier relationship forces the upstream team to take into consideration the needs of the downstream team during the planning process.
+
+### Microservices
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
