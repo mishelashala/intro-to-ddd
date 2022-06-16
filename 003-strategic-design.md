@@ -40,6 +40,20 @@ In projects with bounded contexts where strong boundaries exist and there's no n
 
 As long as free teams deliver, they must be left alone to operate in an autonomous manner.
 
+### Context Map
+
+During the phase development and design we must identify models. And, when possible, define them as bounded contexts.
+
+Bounded context, as many other elements we have previously discussed, must be part of the ubiqutious language.
+
+It is no strange for bounded contexts to require communication between them. We must identify and describe these points of contact and their corresponding translation mechanisms.
+
+We can employ a map to show all the bounded contexts with all their corresponding boundaries. Once this stablished we can draw the contact points between them, and finally we can start thinking -and drawing- the translation mechanisms in the map.
+
+Since we are mapping out all the boundaries and contexts in our system we can use this map as a realistic plan during the strategic design phase.
+
+In order for development to have a strategic plan, first we must have a realistic plan and a deep understanding of the problem. The map not only helps us documenting the contexts and relationships, but it also forces us to think in teams of a realistic design.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
