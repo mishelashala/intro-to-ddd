@@ -122,6 +122,12 @@ The open-host protocol is a good example for the neeed of a published language i
 
 Always document the common medium of communication for the published language. The medium can be, http, sockets, buffers, etc.
 
+### Separate Ways
+
+When you encounter two sets of functionality that bare little or no significant relationship to each other, then let the teams go separate ways.
+
+Split the teams by delcaring a new fully independent context.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
