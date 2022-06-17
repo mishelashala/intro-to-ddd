@@ -112,6 +112,16 @@ Once the protocol is stablished, only expand or extend your protocol when genera
 
 By creating an open protocol for others to connect, intentionally or not, we transform the project into an upstream team in a customer-supplier relationship with other teams.
 
+### Published Language
+
+By using one-to-one translations between bounded contexts we can end up coupling teams and freezing development. Too many bounded contexts with too many translations is maintainability nightmare.
+
+Instead, adopt a common published language that expresses all the domain information to aid teams. Let each team and subsystem translate directly from the published language instead of translating to each specific context. Translations can ocur, just like the ACL, in one or both directions.
+
+The open-host protocol is a good example for the neeed of a published language in a project.
+
+Always document the common medium of communication for the published language. The medium can be, http, sockets, buffers, etc.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
