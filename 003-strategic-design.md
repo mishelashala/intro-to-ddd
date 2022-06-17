@@ -90,8 +90,21 @@ In this case upstream team will always cause delays on the work of downstream te
 
 When the relationships had deformed into a comformist one, the downstream team end up accepting its "fate". The only thing left for them is just to accept things as they are, and work with what they have[^sad].
 
-### Microservices
+### Anti Corruption Layer
+
+When an organization adtops a shared kernel translations between contexts become defensive.
+
+In a customer-supplier relationship the downstream team must protect its own model from upstream systems in order to maintain consistency. This is achieved thru the use of an isolation layer, also called an Anti-Corruption Layer (ACL from now on).
+
+The need for isolation arises when upstream teams -or systems- have legacy systems. These legacy system can have weak modeling -or no modeling at all- compromosing as such the modeling of downstream systems.
+
+The purpose of the ACL is to help isolating both system from the implementation details of each other. This is only possible by translating -and sometimes sanitizing- the models. The ACL can transform between models in one or both directions.
+
+Upstream models show not have a direct impact in the internal models of downstream teams, but that doesn't mean its the responsibility of upstream teams to worry about how their modeling will impact others. There's always must be a contract agreement between parties, but if it's not possible to fulfill that contract "naturally" within the upstream modeling, then the ACL is a great way to "enforce" that contract externally.
 
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
+[^big-design-up-front]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
+[^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
+[^sad]: Sad, very sad
