@@ -102,6 +102,16 @@ The purpose of the ACL is to help isolating both system from the implementation 
 
 Upstream models show not have a direct impact in the internal models of downstream teams, but that doesn't mean its the responsibility of upstream teams to worry about how their modeling will impact others. There's always must be a contract agreement between parties, but if it's not possible to fulfill that contract "naturally" within the upstream modeling, then the ACL is a great way to "enforce" that contract externally.
 
+### Open-Host services
+
+Working with bounded contexts can lead to the need to have many translators for each integration a team has outside of their context. Having many instegrations can become demaning to the team -and the system-. The team can end up failling to fulfill all the needs of the translation layers.
+
+To aliviate this problem we can pick a set of services that provide access to the system. These set of services will operate essentially as a protocol open for external integrations.
+
+Once the protocol is stablished, only expand or extend your protocol when general -or common- needs arise. If a individual or specific need arises, then create a on-off translation for that specific need. By doing so, we can keep the protocol general purpose and maintain consistency.
+
+By creating an open protocol for others to connect, intentionally or not, we transform the project into an upstream team in a customer-supplier relationship with other teams.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
