@@ -128,6 +128,18 @@ When you encounter two sets of functionality that bare little or no significant 
 
 Split the teams by delcaring a new fully independent context.
 
+### Big Ball of Mud
+
+When systems grow without consisten modeling and/or consistent boundaries they eventually become Big Balls of Mud (BBoM from now on).
+
+BBoM tend to keep growing and tend to become harder to work with over tiem. Logic inside BBoM become messy, contigent and confusing.
+
+Due to the lack of structure onBBoM understanding them becomes hard. When a change needs to be made it is usually applied as patch, instead of a well thought piece functionallity, only exarcerbating the problem. This produces an endless cycle: the code is hard to understand, because of that we introduce a patch, the patch makes the code harder to understand.
+
+It is extremely hard to "save" BBoM. The cost of labor is very intensive and the benefits -most of the time- are not worth the effort. It is better to quarantine BBoMs instead of refactoring them.
+
+Always be aware of systems that can become BBoM. Adopt practices that help you avoiding the decay of systems: TDD, unit testing, refactoring.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
