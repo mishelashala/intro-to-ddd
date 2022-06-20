@@ -148,6 +148,18 @@ By distilling the domain we achieve a deeper insight and understanding of the do
 
 From the distillation process, we can also find other subdomains (bounded contexts) and their corresponding models. This distillation process can lead us to have a strategic design, which, as discussed earlier, will help us coming up with a realistic plan for development.
 
+### Generic Subdomains
+
+While refactoring you can end up identifying cohesive subdomains, withe their corresponding models, that don't serve the main goal of the project. These subdomains can up serving only their own goals.
+
+When this happens try to isolate this generic models into their own modules in order to create a separation of concers between the core and generic subdomains.
+
+These generic subdomains probably will end up requiring further development and maintainence. If this need arises we must always prioritize the development of the core domain. We can assign a low priority to these modules and only work on them when the core domain doesn't demand our attention.
+
+During the creation of these generic subdomains we must avoid spending too much time on them. We must avoid re-inventing the wheel as much as posible. We must try to use off-the-shelf pre-made solutions when possible.
+
+To reiterate the point, all these strategies are in place to avoid diverting our attention and priorities from the core domain to the generic subdomains.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
