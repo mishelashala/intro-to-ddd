@@ -214,6 +214,20 @@ This can be a document outlining the folder structure, the naming conventions, t
 
 Other benefit is consisteny across sub-systems. By making all sub-systems following the same structure we don't need to invest mental resources in understanding every sub-system, due to the fact that all sub-systems are similar.
 
+### Evolving Order
+
+Big Balls of Mud will eventually end up limiting and slowing down development teams. By starting a project with no-design we run the risk of turning the project into a big ball of mud in the long run.
+
+By adopting a too big large-scale structures we can also limit and slow down development. The solution to both problems lies in the middle: starting the project with a small large-scale structure.
+
+We not only adopt a small large-scale structure, but we let it evolve with the project. This implies that complete re-writes of the structure can happen. This is not only expected, but encouraged when needed.
+
+Models and designs should fall naturally within the large-scale structure. When models and designs feel limited by the structure, or things don't fit naturally, then we must update the structure.
+
+The goal of the large-scale structure is to enforce the natural relationships in the model and clarify the intent of the system, not to artificially constraint it and obsfuscate the intent. Having a bad structure is worse than having no structure at all.
+
+We must always aim -not only at the beginning of the project, but always- for a minimal and comprehensive set of rules. Less is more.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
