@@ -180,6 +180,16 @@ In order to see the domain more clearly we write a document that describes and h
 
 When a change in the core happens we must instantly notify other team members and make the changes visible in the highlighted core document.
 
+### Cohesive Mechanism
+
+Complex computations often focus too much on the details of what we are doing, in other words, the how. This unintentionally can lead to an obfuscation of the domain. Instead, as we have said earlier, we can focus on what we are doing by splitting complex computations on services.
+
+By providing these services an intention-reveiling interface we shift from focusing on the how to the what. In other words, we delegate the low-level implementation details to the services, and by doing so we can focus in the high-level implementation details.
+
+We must always favor well documented and stablished formalisms and algorithms for complex computations. We must avoid coming up with our own solutions from scratch.
+
+Adopting cohesive mechanisms can help us encapsulate complex operations, and by doing so, declutter our core model.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
