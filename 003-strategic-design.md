@@ -206,6 +206,14 @@ When we have finished the abstraction process, then we must place this abstract 
 
 We must provide clear definitions of all the relationships and interactions between elements that occur in our domain.
 
+### Large Scale Structure for Strategic Design
+
+A Large-scale structure is a set of high-level set of rules and patterns that should govern the entire system. It allows you to understand the system as a whole, at a very high-level, without the need to go deeper into every sub-system.
+
+This can be a document outlining the folder structure, the naming conventions, the code style guide and others. This structure must be follod by the system as a whole and all its sub-systems. By doing so, while working in sub-domains we don't have to shift our attention from the sub context we are working on to the general context.
+
+Other benefit is consisteny across sub-systems. By making all sub-systems following the same structure we don't need to invest mental resources in understanding every sub-system, due to the fact that all sub-systems are similar.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
