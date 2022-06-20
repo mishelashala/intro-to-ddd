@@ -198,6 +198,14 @@ We must always aim to strenghten the core domain and its elements. When an eleme
 
 Sometimes in order to extract and seggregate the complementary elements from the core into other modules we'll need to invest a big amount of time and effort. When this happens, we must accept and pay the price. A strong cohesion in the core model must be always a priority.
 
+### Abstract Core
+
+We must identify the fundamenta elements of the core domain and find the best abstractions to represent them. In OOP-based languages we can use interfaces and abstract classes for this purpose.
+
+When we have finished the abstraction process, then we must place this abstract model into its own module. Because we are dealing with and abstract model, there's no need for us to provide an implementation. That's the job of the teams that are gonna extend from the abstract model.
+
+We must provide clear definitions of all the relationships and interactions between elements that occur in our domain.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
