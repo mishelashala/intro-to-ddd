@@ -170,6 +170,16 @@ This domain vision statement should include what differentiate your models from 
 
 Just like the ubiquitious languages and the model, when new insight or knowledge of the domain is gained we must revise and update (if needed) the value proposition.
 
+### Highlighted Core
+
+Domain vision statements lack (and sometimes avoid) details, this makes them -generally speaking- too broad. Domain vision statements can miss the complex interactions that reside within our domain.
+
+The complexity of this interactions can obfuscate our ability to "see" the domain. And, unfortunately, domain vission statements not always can return us back that ability.
+
+In order to see the domain more clearly we write a document that describes and highlights the core elements of the domain and their interactions.
+
+When a change in the core happens we must instantly notify other team members and make the changes visible in the highlighted core document.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
