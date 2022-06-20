@@ -190,6 +190,14 @@ We must always favor well documented and stablished formalisms and algorithms fo
 
 Adopting cohesive mechanisms can help us encapsulate complex operations, and by doing so, declutter our core model.
 
+### Segfregated Core
+
+It is common to have elements in the core domain that support or serve third parties. When we encounter this types of elements we must extract and seggregated them from the core domain into their own modules.
+
+We must always aim to strenghten the core domain and its elements. When an element doesn't server the core domain, but a third parties, we weak our domain and lose cohesion inside the domain.
+
+Sometimes in order to extract and seggregate the complementary elements from the core into other modules we'll need to invest a big amount of time and effort. When this happens, we must accept and pay the price. A strong cohesion in the core model must be always a priority.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
