@@ -140,9 +140,15 @@ It is extremely hard to "save" BBoM. The cost of labor is very intensive and the
 
 Always be aware of systems that can become BBoM. Adopt practices that help you avoiding the decay of systems: TDD, unit testing, refactoring.
 
+### Distillation for Strategic Design
+
+Distillation is the process of extracting the essence of what makes something useful. In software development modeling is a distillation process. Thru different means, like refactoring, we try to find the objects, the relationships and the rules that govern the domain. These elements for the essence and provide the bulk of the value in the domain.
+
+By distilling the domain we achieve a deeper insight and understanding of the domain. Not only by identifying the elements of the domain, but also, by identifying what makes it useful.
+
+From the distillation process, we can also find other subdomains (bounded contexts) and their corresponding models. This distillation process can lead us to have a strategic design, which, as discussed earlier, will help us coming up with a realistic plan for development.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
-[^big-design-up-front]: See [Big Desing Up Front](https://en.wikipedia.org/wiki/Big_Design_Up_Front) on Wikipedia
-[^refactoring]: DDD promotes a style of refactoring that should always aim to strengthten the model, not to weaken it. In other words: we should not refactor just for the sake of, but with the clear intention in mind of making the model more accurate.
 [^sad]: Sad, very sad
