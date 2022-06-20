@@ -160,6 +160,16 @@ During the creation of these generic subdomains we must avoid spending too much 
 
 To reiterate the point, all these strategies are in place to avoid diverting our attention and priorities from the core domain to the generic subdomains.
 
+### Domain Vision Statement
+
+At the beginning of every projects we have to many incertenties, we lack deep insight and knoledge of the domain; and the models are not well defined yet -or not defined at all. As we go further and further in the development process models start to get defined and refined.
+
+When new members join in late stages of developments the need for non-technical explanations of the models may arise. We can write down a short value proposition of the domain model in order to fulfill that need.
+
+This domain vision statement should include what differentiate your models from other models, in other words: what makes your model special and unique. The vision statement should also include all the benefits and trade offs of your domain.
+
+Just like the ubiquitious languages and the model, when new insight or knowledge of the domain is gained we must revise and update (if needed) the value proposition.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
