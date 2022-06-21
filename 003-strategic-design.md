@@ -246,6 +246,10 @@ By doing so we can enable substitution of modules using the dependency inversion
 
 This allows us to have independence of implementation in each module. Allowing us to develop and evolve the implementation as we see fit.
 
+### Responsibility Laers
+
+Drugin refactoring, modeling or design try to find responsibilities accros the system. These responsibilities tend to connect multiple parts of the system forming a cohesive "story". When these stories emerge consider refactoring them into their own layer.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
