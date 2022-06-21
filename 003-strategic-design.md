@@ -238,6 +238,14 @@ As every part of the systems, metaphors must be constantly re-evaluated, refined
 
 When a metaphor stops facitilitating communication, due to thhe fact it doesn't hold any more meaningful value or because it doesn't fit the domain naturally anymore, it should be dropped or replaced with another (better) metaphor.
 
+### Plugabble Component Framework
+
+We must adopt a plug-based approach during development. We must distil our interfaces and their interactions into a core model.
+
+By doing so we can enable substitution of modules using the dependency inversion principle.
+
+This allows us to have independence of implementation in each module. Allowing us to develop and evolve the implementation as we see fit.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
