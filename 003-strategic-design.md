@@ -228,6 +228,16 @@ The goal of the large-scale structure is to enforce the natural relationships in
 
 We must always aim -not only at the beginning of the project, but always- for a minimal and comprehensive set of rules. Less is more.
 
+### System Metaphor
+
+In a software project concrete analogies that prove to be useful at explaining the domain tend to emerge over time. When this happens, these concrete analogies must be adopted at large-scale and should become part of the ubiquitious language.
+
+These metaphors should not be only used to explain the domain, but also to drive design and modeling thru effective communication. These metaphors should always facilitate communication.
+
+As every part of the systems, metaphors must be constantly re-evaluated, refined and extended every time new insight in the domain is acquired.
+
+When a metaphor stops facitilitating communication, due to thhe fact it doesn't hold any more meaningful value or because it doesn't fit the domain naturally anymore, it should be dropped or replaced with another (better) metaphor.
+
 [^modular-monoliths]: See [Modular Monoliths](http://www.kamilgrzybek.com/design/modular-monolith-primer/)
 [^micro-services]: See [Microservices](https://en.wikipedia.org/wiki/Microservices) on Wikipedia
 [^inverse-conway-s-manouver]: See [Inverse Conway's Manouver](https://ctocraft.com/blog/how-can-the-inverse-conway-manoeuvre-help-drive-organisational-change/)
